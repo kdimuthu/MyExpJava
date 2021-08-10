@@ -13,28 +13,32 @@ public class DateExamples {
 
     public static void main(String []args) {
 
-        //Get the current date & Tie
+        //Get the current date & Time
         Date today = new Date();
-        System.out.println("Current aDte is "+today);
+        System.out.println("Current Date is :"+today);
 
         Date todayInDifferentWay = Calendar.getInstance().getTime();
-        System.out.println("Current Date is(same date in using a different way "+todayInDifferentWay);
+        System.out.println("Current Date is(same date in using a different way :"+todayInDifferentWay);
 
-        //Get the name without time
+        //Get the date without time
         LocalDate.now();
-        System.out.println("Local Date is (Date Without Time) "+LocalDate.now());
+        System.out.println("Local Date is (Date Without Time) :"+LocalDate.now());
 
-        //Get the name without time
+        //Get the time without time
         LocalTime.now();
-        System.out.println("Local Time is "+LocalTime.now());
+        System.out.println("Local Time is :"+LocalTime.now());
 
         //Get the end date of current month
         LocalDate EndDateOfCurrentMonthBeforeFormat=LocalDate.now().with(TemporalAdjusters.lastDayOfMonth());
-        System.out.println("Month End Date is "+EndDateOfCurrentMonthBeforeFormat);
+        System.out.println("End Date of Current Month is :"+EndDateOfCurrentMonthBeforeFormat);
 
-        //Format the date
+        //Change the Format the date
         String EndDateOfCurrentMonth = EndDateOfCurrentMonthBeforeFormat.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         System.out.println("Month End Date after formatted :"+EndDateOfCurrentMonth);
+
+        //How to add a month(30 days) to current date
+        LocalDate day=LocalDate.now().plusMonths(1);
+        System.out.println("Add a month to current date :"+day);
 
     }
 }

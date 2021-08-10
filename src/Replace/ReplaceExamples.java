@@ -44,5 +44,5 @@ public class ReplaceExamples {
         String nameAfterRemovedLastThree=lastName.substring(0,lastName.length()-3);
         System.out.println("Removing last characters :"+nameAfterRemovedLastThree);
     }
-    
+
 }
