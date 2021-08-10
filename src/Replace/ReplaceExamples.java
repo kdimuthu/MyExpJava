@@ -6,33 +6,43 @@ public class ReplaceExamples {
 
         String name="Kenath55@#$dimuthu1234567890-=!@#$%^&*()_+";
 
-        //This is how to drop special characters from a string
+        //This is how to remove special characters from a string
         String nameWithoutSpecialCharacters=name.replaceAll("[^a-zA-Z0-9]","");
-        System.out.println("Without special characters :"+nameWithoutSpecialCharacters);
+        System.out.println("Removing special characters :"+nameWithoutSpecialCharacters);
 
-        //This is how to drop special characters & numbers from a string
+        //This is how to remove special characters & numbers from a string
         String nameWithoutSpecialCharactersAndNumbers=name.replaceAll("[^a-zA-Z]","");
-        System.out.println("Without special characters and Numbers :"+nameWithoutSpecialCharactersAndNumbers);
+        System.out.println("Removing special characters and Numbers :"+nameWithoutSpecialCharactersAndNumbers);
 
-        //This is how to only numbers from a string
+        //This is how to remove numbers only from a string when there are special characters includes in a string
         String nameWithoutOnlyNumbers=name.replaceAll("[0-9]","");
-        System.out.println("Without only Numbers :"+nameWithoutOnlyNumbers);
+        System.out.println("Removing numbers and keeping special characters:"+nameWithoutOnlyNumbers);
 
-        //Replace a character with a another character
+        //Replace a character with a character
         String Gender="Male";
         String GenderAfterReplacingACharacter=Gender.replaceAll("M","Fem");
-        System.out.println("Replacing a characters with another character " +GenderAfterReplacingACharacter);
+        System.out.println("Replacing a characters with another character :" +GenderAfterReplacingACharacter);
 
         //Remove spaces
         String Address="No 6, Test Road, Colombo  09";
         String AddressWithoutSpaces=Address.replaceAll("\\s","");
-        System.out.println("Removing spaces in a string " +AddressWithoutSpaces);
+        System.out.println("Removing spaces in a string :" +AddressWithoutSpaces);
 
-        //Replace First character
+        //Replace First character when there are multiple characters from same letter in a string
 
         String City="Ambalanmgoda";
         String CityAfterReplacingFirstCharacter=City.replaceFirst("A","D");
-        System.out.println("Replacing First Character " +CityAfterReplacingFirstCharacter);
+        System.out.println("Replacing First Character :" +CityAfterReplacingFirstCharacter);
 
+
+        //This is how to remove first 5 characters from a string
+        String lastName="Ramanayaka";
+        String nameAfterRemovedFirstFive=lastName.substring(5);
+        System.out.println("Removing first characters :"+nameAfterRemovedFirstFive);
+
+        //This is how to remove last 3 characters from a string
+        String nameAfterRemovedLastThree=lastName.substring(0,lastName.length()-3);
+        System.out.println("Removing last characters :"+nameAfterRemovedLastThree);
     }
+    
 }
