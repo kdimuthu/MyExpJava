@@ -43,6 +43,20 @@ public class ReplaceExamples {
         //This is how to remove last 3 characters from a string
         String nameAfterRemovedLastThree=lastName.substring(0,lastName.length()-3);
         System.out.println("Removing last characters :"+nameAfterRemovedLastThree);
+
+        //Removing spaces from both ends in a string
+        String FirstName="  dim ramax ";
+        String FirstNameAfterTrim=FirstName.trim();
+        System.out.println("Removing spaces from both end :"+FirstNameAfterTrim);
+
+        //Getting the length of a string(Calculating including spaces
+        String LastName="dim rama ";
+        System.out.println("Length of the String is "+LastName.length());
+
+        System.out.println(FirstName.concat(lastName));
+
+        String Nameplus=FirstName+lastName;
+        System.out.println(Nameplus);
     }
 
 }
