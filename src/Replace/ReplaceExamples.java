@@ -5,6 +5,11 @@ public class ReplaceExamples {
     public static void main(String []args) {
 
         String name="Kenath55@#$dimuthu1234567890-=!@#$%^&*()_+";
+        String emptyString="";
+
+        //This is how to remove characters and special characters from a string
+        String RemovingSpecialCharactersAndCharacters=name.replaceAll("[^0-9]","");
+        System.out.println("Removing Special Characters And Characters "+RemovingSpecialCharactersAndCharacters);
 
         //This is how to remove special characters from a string
         String nameWithoutSpecialCharacters=name.replaceAll("[^a-zA-Z0-9]","");
@@ -57,6 +62,14 @@ public class ReplaceExamples {
 
         String Nameplus=FirstName+lastName;
         System.out.println(Nameplus);
+
+        //This is how to check if a string is not nul
+        if (emptyString!= null && !emptyString.isEmpty()){
+            System.out.println("Name is not null & empty: "+name);
+        }
+        else {
+            System.out.println("String is empty");
+        }
     }
 
 }

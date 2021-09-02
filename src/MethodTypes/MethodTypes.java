@@ -39,6 +39,7 @@ public class MethodTypes {
         return status;
     }
 
+    //This is how to define a method with return type as a string
     public String[] DoArray(){
         String[] information=new String[4];
         information[0]="A";
@@ -47,4 +48,5 @@ public class MethodTypes {
         information[3]="B";
         return information;
     }
+
 }

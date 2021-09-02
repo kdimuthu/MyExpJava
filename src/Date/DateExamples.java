@@ -16,7 +16,12 @@ public class DateExamples {
         //Get the current date & Time
         Date today = new Date();
         System.out.println("Current Date is :"+today);
-
+        //Get the formatted current date for the given format with AM PM
+        SimpleDateFormat format = new SimpleDateFormat("MMMM d, yyyy h:mm aa");
+        //September 1, 2021 3:21 PM
+        Date now = new Date();
+        String strDate = format.format(now);
+        System.out.println("Formatted Current date is "+strDate);
         Date todayInDifferentWay = Calendar.getInstance().getTime();
         System.out.println("Current Date is(same date in using a different way :"+todayInDifferentWay);
 
